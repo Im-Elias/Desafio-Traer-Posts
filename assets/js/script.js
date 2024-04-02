@@ -4,7 +4,7 @@ const getPosts = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     const data = await res.json();
     data.forEach((element) => {
-      lista += `<li><p>${element.id} - ${element.body}</p></li>`;
+      lista += `<li><p>${element.body}</p></li>`;
     });
     document.querySelector("#post-data").innerHTML = `<ul>${lista}</ul>`;
   } catch (error) {
